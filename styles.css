@@ -1,0 +1,29 @@
+/* #testText{
+    background:pink;
+}
+
+@keyframes background-carousel{
+    0% { background-image: url("images/IMG_1632.jpg"); }
+    33% { background-image: url("images/IMG_1635.jpg"); }
+    66% { background-image: url("images/IMG_1655.jpg"); }
+    100% { background-image: url("images/IMG_1632.jpg"); }
+}
+
+header{
+    height: 30em;
+    background-size: 20em;
+    background-repeat: no-repeat;
+    animation-name : background-carousel;
+    animation-duration : 30s;
+    animation-iteration-count: infinite;
+}  */
+
+header{
+    height:20em;
+}
+
+.headerSlides{
+    display:none;
+    height:300px;
+    opacity: 1
+}

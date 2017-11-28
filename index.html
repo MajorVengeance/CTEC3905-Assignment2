@@ -1,4 +1,32 @@
 <!DOCTYPE HTML>
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </head>
+    <body>
+        <header>
+            <img class="headerSlides" src="images/IMG_1632.jpg"/>
+            <img class="headerSlides" src="images/IMG_1635.jpg"/>
+            <img class="headerSlides" src="images/IMG_1655.jpg"/>
+            <img class="headerSlides" src="images/IMG_1632.jpg"/>
+    <script>
+        var myIndex = 0;
+carousel();
 
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("headerSlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    console.log("test");
+    setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+    </script>
+        </header>
+            <!-- <p id="testText">YO IM A TEST TEXT</p> -->
+    </body>
 </html>
