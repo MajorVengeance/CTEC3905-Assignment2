@@ -1,3 +1,21 @@
+.cal {
+  width: 60%;
+  max-width: 42rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #e7e9ed;
+  position: relative;
+}
+
+@media only screen and (min-width: 700px){
+  .cal{
+    width: 80%;
+  }
+}
+
 .cal__header button {
   background: none;
   border: 0;
@@ -16,17 +34,6 @@
 .cal button:active {
   border-radius: 3px;
   box-shadow: 0 0 0 2px rgba(10, 146, 151, 0.1)
-}
-
-.cal {
-  width: 100%;
-  max-width: 42rem;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 3px;
-  overflow: hidden;
-  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
-  border: solid 1px #e7e9ed;
 }
 
 .cal__header {

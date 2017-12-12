@@ -56,16 +56,17 @@ var vanillacalendar = {
     }
 
     newDay.appendChild(dateEl)
-    console.log(this);
     this.month.appendChild(newDay)
   },
 
   dateClicked: function () {
     var _this = this
     this.activeDates = document.querySelectorAll('[data-calendar-status="active"]')
+    console.log(this.activeDates);
     for (var i = 0; i < this.activeDates.length; i++) {
       this.activeDates[i].addEventListener('click', function (event) {
         var picked = document.querySelectorAll('[data-calendar-label="picked"]')[0]
+        console.log(picked)
         picked.innerHTML = this.dataset.calendarDate
         _this.removeActiveClass()
         this.classList.add('cal__date--selected')
@@ -75,7 +76,6 @@ var vanillacalendar = {
 
   createMonth: function () {
     var currentMonth = this.date.getMonth()
-    console.log(currentMonth);
     while (this.date.getMonth() === currentMonth) {
       this.createDay(this.date.getDate(), this.date.getDay(), this.date.getFullYear())
       this.date.setDate(this.date.getDate() + 1)
