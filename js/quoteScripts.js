@@ -54,15 +54,64 @@ function loadFromJSON(){
 }
 
 function codeAddress(address){
-  geocoder.geocode( {'address': address}, function(results, stauts) {
+  geocoder.geocode( {'address': address}, function(results, status) {
     if(status == 'OK'){
         addMarker(results[0].geometry.location);
+		return true;
     } else{
       alert('Geocode was not successful for the following reason: ' + status);
+	  return false;
     }
   });
 }
 
 function makeBooking(){
+	var address = "";
+	var x = document.forms["bookQuote"]["name"].value;
+	if(x == ""){
+		alert("Name must be filled out");
+		return false;
+	}
+	
+	x = document.forms["bookQuote"]["add1"].value;
+	if(x == ""){
+		alert("Address Line 1 must be filled out");
+		return false;
+	}
+	address += x;
+	
+	x = document.forms["bookQuote"]["add2"].value;
+	if(x !== ""){
+		address += ", " + x;
+	}
+	
+	x = document.forms["bookQuote"]["city"].value;
+	if(x == ""){
+		alert("City must be filled out");
+		return false;
+	}
+	address += ", " + x;
+	
+	x = document.forms["bookQuote"]["postcode"].value;
+	if(x == ""){
+		alert("Postcode must be filled out");
+		return false;
+	}
+	else if(!validatePostcode(x)){
+			return false;
+	}
+	address += ", " + x;
+	
+	if(!codeAddress(address)){
+		return false;
+	}
+	
+	var form = document.getElementsByName('bookQuote');
+	form[0].submit();
+}
 
+function validatePostcode(postcode){
+	postcode = postcode.replace(/\s/g, "");
+	var regex = /^[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}$/i;
+	return regex.test(postcode);
 }
