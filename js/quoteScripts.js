@@ -1,4 +1,5 @@
 var markers = [];
+var date = new Date();
 var map;
 var geocoder;
 
@@ -47,8 +48,16 @@ function showMarkers(){
 
 function loadFromJSON(){
   let obj = JSON.parse(mapLatLng);
-  for(i in obj.Test){
-    var latLng = new google.maps.LatLng(obj.Test[i].lat, obj.Test[i].lng);
+  
+  if(vanillacalendar.picked == null || vanillacalendar.picked == this.date.getTime()){
+	  
+  }
+  else{
+	  //use dates in JSON crap
+  }
+  
+  for(i in obj.TestData){
+    var latLng = new google.maps.LatLng(obj.TestData[i].lat, obj.TestData[i].lng);
     addMarker(latLng);
   }
 }

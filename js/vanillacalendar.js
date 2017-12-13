@@ -6,7 +6,8 @@ var vanillacalendar = {
   activeDates: null,
   date: new Date(),
   todaysDate: new Date(),
-
+  picked: new Date(),
+  
   init: function () {
     this.date.setDate(1)
     this.createMonth()
@@ -62,12 +63,11 @@ var vanillacalendar = {
   dateClicked: function () {
     var _this = this
     this.activeDates = document.querySelectorAll('[data-calendar-status="active"]')
-    console.log(this.activeDates);
     for (var i = 0; i < this.activeDates.length; i++) {
       this.activeDates[i].addEventListener('click', function (event) {
-        var picked = document.querySelectorAll('[data-calendar-label="picked"]')[0]
-        console.log(picked)
-        picked.innerHTML = this.dataset.calendarDate
+        var pickedLbl = document.querySelectorAll('[data-calendar-label="picked"]')[0]
+        pickedLbl.innerHTML = this.dataset.calendarDate
+		picked = this.dataset.calendarDate
         _this.removeActiveClass()
         this.classList.add('cal__date--selected')
       })
