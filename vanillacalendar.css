@@ -1,3 +1,7 @@
+.demo-picked{
+  display: none;
+}
+
 .cal {
   width: 60%;
   max-width: 42rem;
@@ -8,6 +12,8 @@
   box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
   border: solid 1px #e7e9ed;
   position: relative;
+/* keep hidden unless day click functionality is worked out */
+  display: none;
 }
 
 @media only screen and (min-width: 700px){

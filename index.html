@@ -4,20 +4,72 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <script src="js/pageBase.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D.S.Martin Electrical Services</title>
 </head>
 
 <body>
   <header>
-    <!-- <img class="headerSlides" src="images/IMG_1635.jpg"/> -->
-    <img src="images/banner_electrical_1.jpg"/>
+    <img src="images/banner_electrical_1.jpg" />
   </header>
   <nav class="topnav" id="topNav">
     <a href="index.html">Home</a>
-    <a href="#home">HELP</a>
+    <a href="#Gallery">Gallery</a>
     <a href="quote.html">Book A Quote</a>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">&#9776;</a>
   </nav>
-  <!-- <p id="testText">YO IM A TEST TEXT</p> -->
+  <main>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada est vel nulla finibus iaculis. Pellentesque vitae dolor
+      sed eros bibendum convallis ac ut metus. Vestibulum non iaculis risus. Fusce nisi risus, vestibulum eget risus vel,
+      elementum vehicula ex. Nulla ac porttitor libero. Duis odio quam, commodo non mi aliquet, venenatis ultricies enim.
+      Donec id malesuada mauris. Donec vel consequat elit. Maecenas eu maximus diam.
+    </p>
+    <p>
+      Fusce euismod sapien in laoreet facilisis. Ut porttitor odio ornare magna ultricies, id gravida enim eleifend. In tortor
+      mi, lacinia sit amet vehicula in, tempor at sapien. In hac habitasse platea dictumst. Suspendisse potenti. Cras condimentum
+      iaculis eros eget consectetur. Nam sit amet sem ut leo dapibus viverra eu vel nulla. Aliquam porta ornare velit at
+      tempus. Sed consequat libero eget arcu venenatis tempor. Sed mollis condimentum risus. Fusce euismod lectus eget eros
+      faucibus, vel aliquam purus consequat. Vivamus posuere velit neque. Fusce vestibulum eros non nisl ornare, non elementum
+      purus consectetur. Praesent placerat eleifend odio, non maximus tellus euismod ut.
+    </p>
+    <p>
+      Sed eleifend auctor leo, at porttitor lorem egestas in. Suspendisse vestibulum tempus urna, eu aliquam lectus fringilla sed.
+      Proin tempus tortor ex, at interdum lorem mollis elementum. Nullam a rutrum enim. Mauris condimentum pretium orci quis
+      egestas. Proin accumsan nulla tristique, euismod eros vitae, finibus metus. Nulla arcu sem, blandit sit amet lacus
+      in, ultricies fermentum lacus. Curabitur ut velit ante. Proin non finibus leo.
+    </p>
+    <p>
+      Maecenas nisl nibh, hendrerit eu magna eu, eleifend venenatis augue. Curabitur id nibh laoreet, dignissim urna ut, volutpat
+      tortor. Quisque porttitor leo sem, vitae cursus odio rhoncus sit amet. Vivamus laoreet elit in dui imperdiet, sed mattis
+      arcu congue. Nam ultrices, purus non maximus interdum, ligula nulla vestibulum tellus, et viverra urna nisl eget orci.
+      Aliquam erat volutpat. Aenean tempor odio ut lectus scelerisque, at venenatis tortor porta. Maecenas cursus mauris
+      ut massa rutrum ullamcorper.
+    </p>
+    <p>
+      In hac habitasse platea dictumst. Aenean tempor elit at turpis commodo, sed molestie elit viverra. Vestibulum interdum sem
+      at facilisis finibus. Nulla vel blandit erat, et molestie odio. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas. Nullam interdum nibh enim, a tempor enim finibus ac. Sed mauris nunc, malesuada
+      ac justo efficitur, cursus cursus justo. Integer interdum maximus quam, tristique tristique felis sollicitudin sed.
+      Quisque id rutrum dolor. Nullam in mauris et lacus rutrum facilisis sit amet ac ex. Suspendisse suscipit, nisi quis
+      tincidunt porta, orci ligula condimentum lectus, id fringilla dui magna in dui.
+    </p>
+  </main>
+  <section id="Gallery">
+    <div id="container">
+      <p id="numberText"> </p>
+      <img id="currentImage" />
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <script src="js/galleryScripts.js"></script>
+  </section>
 </body>
 
 </html>
