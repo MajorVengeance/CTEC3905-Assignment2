@@ -1,11 +1,3 @@
-let imgTxt = `{
-  "imgData":[
-    {"source":"images/IMG_1659.jpg", "caption":"Dado Trunking Installation in a Commercial Building"},
-    {"source":"images/IMG_1655.jpg", "caption":"Flat Panel LED Lights Installation in a Commerical Building"},
-    {"source":"images/IMG_1657.jpg", "caption":"Dado Trunking Installation in a Commercial Building"}
-  ]
-}`;
-
 var slideIndex = 1;
 var imgCapt;
 document.getElementsByTagName("body")[0].addEventListener("load", initGallery(), false);
