@@ -3,11 +3,10 @@
 
 <head>
   <script src="js/pageBase.js"></script>
-
   <script src="js/mapLatLng.js"></script>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="stylesheet" type="text/css" href="vanillacalendar.css"/>
+  <link rel="stylesheet" type="text/css" href="vanillacalendar.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D.S.Martin Electrical Services - Book a Quote</title>
@@ -15,7 +14,7 @@
 
 <body>
   <header>
-    <img src="images/banner_electrical_1.jpg"/>
+    <img src="images/banner_electrical_1.jpg" />
   </header>
 
   <nav class="topnav" id="topNav">
@@ -28,35 +27,62 @@
   <!-- vanilla calendar obtained from GitHub, link in README.md -->
   <div class="cal">
     <div class="cal__header">
-      <button class="btn btn-action btn-link btn-lg" data-calendar-toggle="previous"><svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg></button>
+      <button class="btn btn-action btn-link btn-lg" data-calendar-toggle="previous">
+        <svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+        </svg>
+      </button>
       <div class="cal__header__label" data-calendar-label="month">
-					December 2017
-      </div><button class="btn btn-action btn-link btn-lg" data-calendar-toggle="next"> <svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg></button>
+        December 2017
+      </div>
+      <button class="btn btn-action btn-link btn-lg" data-calendar-toggle="next">
+        <svg height="24" version="1.1" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+        </svg>
+      </button>
     </div>
     <div class="cal__week">
-      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+      <span>Sun</span>
     </div>
     <div class="cal__body" data-calendar-area="month">
     </div>
   </div>
 
   <p class="demo-picked">
-    Date picked: <span data-calendar-label="picked"></span>
+    Date picked:
+    <span data-calendar-label="picked"></span>
   </p>
-      
-  <form name="bookQuote" method="POST">
-    Name: <input type="text" name="fullName" required><br>
-    Address Line 1: <input type="text" name="add1" required><br>
-    Address Line 2: <input type="text" name="add2"><br>
-    City: <input type="text" name="city" required><br>
-    PostCode: <input type="text" name="postcode" required><br>
-    <input type="button" onclick="makeBooking()" value="Submit">
-  </form>
-
+  <div id="QuoteForm">
+    <!--Form to add markers to the google Map -->
+    <!--Form Method set to post, just so I don't have the form information putting itself in my URL -->
+    <form name="bookQuote" method="POST">
+      <label for="fullName">Name: </label>
+      <input type="text" name="fullName" required>
+      <br>
+      <label for="add1">Address Line 1: </label>
+      <input type="text" name="add1" required>
+      <br>
+      <label for="add2">Address Line 2: </label>
+      <input type="text" name="add2">
+      <br>
+      <label for="city">City: </label>
+      <input type="text" name="city" required>
+      <br>
+      <label for="postcode">PostCode: </label>
+      <input type="text" name="postcode" required>
+      <br>
+      <input type="button" onclick="makeBooking()" value="Submit">
+    </form>
+  </div>
   <!--Google maps div-->
-  <div id="map"></div>
+  <aside id="map">
+  </aside>
 
   <!--Scripts at the bottom to ensure no DOM loading issues which were intermittently
     apparent with the calendar-->

@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script src="js/pageBase.js"></script>
+
   <script src="js/galleryData.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
   </header>
   <nav class="topnav" id="topNav">
     <a href="index.html">Home</a>
-    <a href="#Gallery">Gallery</a>
+    <a href="index.html#Gallery">Gallery</a>
     <a href="quote.html">Book A Quote</a>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">&#9776;</a>
   </nav>
@@ -59,19 +59,21 @@
     </p>
   </main>
   <section id="Gallery">
-    <div id="container">
+    <h2>Gallery</h2>
+    <p>Below is a selection of </p>
+    <figure id="container">
       <p id="numberText"> </p>
       <img id="currentImage" />
-
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      <div class="caption-container">
+      <figcaption class="caption-container">
         <p id="caption"></p>
-      </div>
-    </div>
-
-    <script src="js/galleryScripts.js"></script>
+        </div>
+        </div>
+        <script src="js/galleryScripts.js"></script>
   </section>
+
+  <script src="js/pageBase.js"></script>
 </body>
 
 </html>
