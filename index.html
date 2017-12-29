@@ -7,7 +7,7 @@
   <link rel="icon" href="images/favicon.png" />
 
   <script src="js/galleryData.js"></script>
-
+  <!-- used meta viewport to make width work properly on mobile, as scaling was a bit iffy -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D.S.Martin Electrical Services</title>
 </head>
@@ -24,6 +24,7 @@
   </nav>
   <main>
     <h1>D. S. Martin Electrical Services</h1>
+    <!-- Lorem Ipsum text to fill a bit -->
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada est vel nulla finibus iaculis. Pellentesque vitae dolor
       sed eros bibendum convallis ac ut metus. Vestibulum non iaculis risus. Fusce nisi risus, vestibulum eget risus vel,
@@ -60,11 +61,14 @@
       tincidunt porta, orci ligula condimentum lectus, id fringilla dui magna in dui.
     </p>
   </main>
+  <!-- use a new section for the gallery -->
   <section id="Gallery">
     <h2>Gallery</h2>
     <p>Below is a selection of images from completed jobs:</p>
+    <!-- a figure and figcaption tag seemed perfect here, rather than two divs -->
     <figure id="container">
       <p id="numberText"> </p>
+      <!-- set the src to be the same as the favourites icon due to w3c validator complaining about leaving it empty -->
       <img id="currentImage" src="images/favicon.png" alt="Gallery Empty" />
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -74,6 +78,7 @@
     </figure>
     <script src="js/galleryScripts.js"></script>
   </section>
+  <!-- added a footer linking to my github! -->
   <footer>
     <p>2017 MajorVengeance -
       <a href="https://github.com/MajorVengeance" target="_blank">GitHub</a>
