@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="galleryStyles.css" />
 
   <script src="js/galleryData.js"></script>
 
@@ -12,7 +13,7 @@
 
 <body>
   <header>
-    <img src="images/banner_electrical_1.jpg" />
+    <img src="images/banner_electrical_1.jpg" alt="Banner Image of Wire Testing" />
   </header>
   <nav class="topnav" id="topNav">
     <a href="index.html">Home</a>
@@ -60,19 +61,23 @@
   </main>
   <section id="Gallery">
     <h2>Gallery</h2>
-    <p>Below is a selection of </p>
+    <p>Below is a selection of images from completed jobs:</p>
     <figure id="container">
       <p id="numberText"> </p>
-      <img id="currentImage" />
+      <img id="currentImage" src="" alt="" />
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
       <figcaption class="caption-container">
         <p id="caption"></p>
-        </div>
-        </div>
-        <script src="js/galleryScripts.js"></script>
+      </figcaption>
+    </figure>
+    <script src="js/galleryScripts.js"></script>
   </section>
-
+  <footer>
+    <p>2017 MajorVengeance -
+      <a href="https://github.com/MajorVengeance" target="_blank">GitHub</a>
+    </p>
+  </footer>
   <script src="js/pageBase.js"></script>
 </body>
 

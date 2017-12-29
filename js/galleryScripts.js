@@ -25,6 +25,7 @@ function showSlides(n) {
   var imageNumberText = n + " / " + i;
   imageNumber.innerHTML = imageNumberText;
   imageToChange.src = imgCapt.imgData[n - 1].source;
+  imageToChange.alt = imgCapt.imgData[n - 1].caption;
   var imageCaption = document.getElementById("caption");
   imageCaption.innerHTML = imgCapt.imgData[n - 1].caption;
 

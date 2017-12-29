@@ -4,7 +4,7 @@ var map;
 var geocoder;
 
 function initPage(){
-  vanillacalendar.init();
+  //vanillacalendar.init();
   initMap();
 }
 
@@ -48,13 +48,6 @@ function showMarkers(){
 
 function loadFromJSON(){
   let obj = JSON.parse(mapLatLng);
-  
-  if(vanillacalendar.picked == null || vanillacalendar.picked == this.date.getTime()){
-	  
-  }
-  else{
-	  //use dates in JSON crap
-  }
   
   for(i in obj.TestData){
     var latLng = new google.maps.LatLng(obj.TestData[i].lat, obj.TestData[i].lng);
@@ -109,7 +102,17 @@ function makeBooking(){
 	else if(!validatePostcode(x)){
 			return false;
 	}
-	address += ", " + x;
+  address += ", " + x;
+  
+  x = document.forms["bookQuote"]["contactNo"].value;
+	if(x == ""){
+		alert("Contact Number must be filled out");
+		return false;
+	}
+	else if(!validateContactNo(x)){
+			return false;
+	}
+  address += ", " + x;
 	
 	if(!codeAddress(address)){
 		return false;
@@ -117,6 +120,11 @@ function makeBooking(){
 	
 	var form = document.getElementsByName('bookQuote');
 	form[0].submit();
+}
+
+function validateContactNo(number){
+  var regex = /[0-9]+/i;
+  return regex.test(number);
 }
 
 function validatePostcode(postcode){
