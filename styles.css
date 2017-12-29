@@ -1,5 +1,5 @@
 body {
-  font-family: cursive;
+  font-family: serif;
   font-size: 1rem;
   background: linear-gradient(to bottom right, #f043ae 0%, #db1fb2 51%, #b526ee 75%);
   margin: 0;
@@ -122,11 +122,11 @@ footer p, a {
     background: none;
     padding-left: 1rem;
   }
-  h2{
+  h2 {
     background: none;
     color: #222;
   }
-  h1{
+  h1 {
     background: none;
     color: #222;
   }

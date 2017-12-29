@@ -5,6 +5,7 @@
   max-width: 1000px;
   background: #310606;
 }
+
 #Gallery p {
   margin-bottom: 0.5rem;
 }
@@ -59,11 +60,10 @@
 }
 
 @media only screen and (min-width: 700px) {
-  #container{
-    border: 0.2rem solid #333;
+  #container {
     border-radius: 1rem;
     background: #333;
-    padding: 0.5rem;
+    padding: 0.7rem;
   }
   #numberText {
     color: #f2f2f2;
@@ -88,7 +88,6 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
-
   .caption-container {
     text-align: center;
     background-color: #222;
@@ -97,8 +96,7 @@
     color: white;
     top: -1rem;
   }
-
-  #Gallery{
+  #Gallery {
     margin-bottom: 1rem;
   }
 }
